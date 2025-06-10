@@ -4,7 +4,7 @@ from llm_utils import generate_prompt, call_llm, extract_json
 
 st.set_page_config(page_title="Regulatory Change Analyzer", layout="wide")
 
-st.title("📄 Regulatory Change Analyzer")
+st.title(" Regulatory Change Analyzer")
 
 uploaded_v1 = st.file_uploader("Upload BEFORE document (Text_v1.txt)", type="txt")
 uploaded_v2 = st.file_uploader("Upload AFTER document (Text_v2.txt)", type="txt")
