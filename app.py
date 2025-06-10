@@ -14,10 +14,10 @@ if st.button("Analyze Changes"):
         text_v1 = uploaded_v1.read().decode('utf-8')
         text_v2 = uploaded_v2.read().decode('utf-8')
 
-        with st.spinner("🔍 Detecting changes..."):
+        with st.spinner(" Detecting changes..."):
             changes = compare_documents(text_v1, text_v2)
 
-        st.success(f"✅ Detected {len(changes)} changes.")
+        st.success(f" Detected {len(changes)} changes.")
 
         for idx, change in enumerate(changes):
             with st.expander(f"Change #{idx+1} — {change['change_type']}"):
@@ -27,7 +27,7 @@ if st.button("Analyze Changes"):
                     st.markdown(f"**New Text:**\n\n{change['new_text']}")
 
                 prompt = generate_prompt(change.get('old_text'), change.get('new_text'))
-                with st.spinner("🤖 Analyzing with LLM..."):
+                with st.spinner(" Analyzing with LLM..."):
                     llm_output = call_llm(prompt)
                     llm_json = extract_json(llm_output)
 
