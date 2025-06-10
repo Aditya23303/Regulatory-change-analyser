@@ -35,4 +35,4 @@ if st.button("Analyze Changes"):
                 st.markdown(f"**Change Type:** {llm_json['change_type']}")
 
     else:
-        st.error("❌ Please upload BOTH documents.")
+        st.error(" Please upload BOTH documents.")
