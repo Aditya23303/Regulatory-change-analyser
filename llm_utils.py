@@ -20,7 +20,7 @@ def generate_prompt(old_text=None, new_text=None):
 
 def call_llm(prompt):
     payload = {
-        "model": "mistral",   # or phi2, phi3, tinyllama if you've pulled them
+        "model": "phi3",   
         "prompt": prompt,
         "stream": False
     }
